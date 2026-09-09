@@ -70,3 +70,4 @@ endereco_fornecedor VARCHAR(150) not NULL,
 status_fornecedor ENUM ('ativo', 'inativo') DEFAULT 'ativo'
 data_cadastro timestamp default current_timestamp
 );
+
