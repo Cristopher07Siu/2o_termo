@@ -1,0 +1,26 @@
+/* CABEÇALHO */
+h1 {
+    font-family: cursive;
+    color: cadetblue;
+    font-size: x-large;
+}
+
+.seletor {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    padding: 30px;
+    line-height: 1.5px;
+}
+
+#texto {
+    color: blue;
+}
+
+h2 {
+ font-family: roboto;
+ font-weight: bolder;
+ text-align: center;
+ margin: 30px;
+ padding: 30px;
+
+}
