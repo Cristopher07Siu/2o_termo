@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "chave",
+    "quantidade": 20,
+    "custoUnitario": 20
+  },
+  {
+    "nome": "porca",
+    "quantidade": 3,
+    "custoUnitario": 18
+  },
+  {
+    "nome": "macaquinho",
+    "quantidade": 2,
+    "custoUnitario": 249
+  }
+]
