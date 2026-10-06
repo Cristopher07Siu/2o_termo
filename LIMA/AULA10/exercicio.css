@@ -1,32 +1,35 @@
 .Equipe {
     display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+
+.Equipe-q {
+    display: flex;
+    /* justify-content: center; Este codigo faz com que a lista va para o centro */
+    /* justify-content: flex-end; Este codigo faz com que a lista va para o final */
+    /* justify-content: flex-start; Este codigo faz com que a lista va para o começo */
+    /* justify-content: space-between; Este codigo faz com que a lista fique separa com uma distancia bem alta entre os topicos */
+    justify-content: space-evenly; /* Este codigo faz com que a lista fique no centro e juntas */
+}
+
+.cards {
+    display: flex;
     gap: 20px;
 }
 
-.Equipe-c {
+.Equipe-a {
     display: flex;
-    gap: 30px;
+    justify-content: flex-start;
 }
 
 .Equipe-b {
     display: flex;
     justify-content: center;
+}
 
+.Equipe-c {
+    display: flex;
     justify-content: flex-end;
-    justify-content: space-between;
-    justify-content: space-evenly;
-    justify-content: flex-start;
-}
-
-.Equipe-m {
-    display: flex;
-    /* align-items: flex-end;
-    align-items: flex-start; */
-    align-items: center;
-    gap: 23px;
-}
-
-.cards > article {
-    display: flex;
-    gap: 20px;
 }
