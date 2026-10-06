@@ -1,0 +1,32 @@
+.Equipe {
+    display: flex;
+    gap: 20px;
+}
+
+.Equipe-c {
+    display: flex;
+    gap: 30px;
+}
+
+.Equipe-b {
+    display: flex;
+    justify-content: center;
+
+    justify-content: flex-end;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+}
+
+.Equipe-m {
+    display: flex;
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    align-items: center;
+    gap: 23px;
+}
+
+.cards article {
+    display: flex;
+    gap: 20px;
+}
