@@ -28,6 +28,7 @@ nav a {
 }
 
 .sobre {
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFF9F3;
     color: black;
@@ -35,6 +36,7 @@ nav a {
 }
 
 ul {
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     display: flex;
@@ -42,9 +44,14 @@ ul {
     gap: 30px;
 }
  h1 {
+    display: flex;
     float: left;
     padding-bottom: 10px;
 
  }
 
- 
+ .cafes {
+    display: flex;
+    justify-content: flex-start;
+ }
+
