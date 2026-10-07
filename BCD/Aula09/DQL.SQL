@@ -77,7 +77,7 @@ WHERE ativo = TRUE
 and (cidade = 'Limeira' or cidade = 'limeira');
 
 -- EX 7: Pesquisando por intervalo -- between
-SELECT nome, produto
+SELECT nome, preco
 FROM produto where preco BETWEEN 8.00 and 15.00;
 
 SELECT id_pedido, data_pedido, valor_total
@@ -129,9 +129,7 @@ WHERE IS NOT FULL;
 -- EX 11: order by - ordenar resultados
 -- ASC sigifica crescente
 -- DESC significa decrescente
-SELECT nome, preco
-FROM produto
-ORDER BY preco ASC;
+
 
 SELECT nome, preco
 FROM produto
@@ -178,3 +176,58 @@ FROM pedido;
 -- Substituindo o NULL no resultado - coalesce
 SELECT nome, COALESCE(telefone, 'Não Informado') AS Contato
 FROM cliente;
+
+-- EX 15: Funções de agragação - SUM, AVG, MIN, MAX, COUNT
+-- count - contar quantidade de registros
+-- sum - soma de valores
+-- avg - média de valores
+-- min - menor valor
+-- max - maior valor
+
+SELECT COUNT(*) AS Total_clientes
+FROM cliente;
+-- Resultado de quantidade de cliente
+
+SELECT AVG(preco) AS Média_Precos
+FROM produto;
+-- Média do valor dos produtos
+
+SELECT MIN(preco) AS Promoção, MAX(preco) AS Reajuste, AVG (preco) AS Média_Precos
+FROM produto;
+-- Resumo de preços
+
+SELECT SUM(valor_total) AS Faturamento_Mensal
+FROM pedido
+WHERE status = 'FINALIZADO';
+-- Total de pedidos finalizados
+
+-- EX 16: GROUP BY - Agrupar dados
+SELECT cidade, COUNT(*) AS qtde_cidades
+FROM cliente
+GROUP BY cidade;
+-- Consulta por grupos de cidades
+
+SELECT id_categoria, COUNT(*) AS qtde_produtos
+FROM produto
+GROUP BY id_categoria;
+-- Quantidade por categoria
+
+-- EX 17: HAVING - Filtro por Grupo
+SELECT cidade, COUNT(*) AS quantidade_clientes
+FROM cliente
+GROUP BY cidade
+HAVING COUNT(*) >=2;
+-- DICA: Usar o HAVING e nao esquecer o GROUP BY
+
+---------------------------------------------------------------------------------
+-- EX 18: Consulta Completa
+SELECT colunas
+FROM tabela
+WHERE condicao
+GROUP BY colunas_agrupar
+HAVING condicao
+ORDER BY colunas
+LIMIT quantidade;
+
+-- Dica para seguir em ordem lógica para uma consulta parcial ou completa
+--------------------------------------------------------------------------------
