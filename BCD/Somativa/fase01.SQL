@@ -96,16 +96,7 @@ SELECT ano_publicacao
 FROM livro
 where ano_publicacao BETWEEN 2015 and 2025;
 
-SELECT quantidade_disponivel, COUNT(*) AS quantidade_disponivel
-FROM quantidade_disponivel
-GROUP BY quantidade_disponivel
-HAVING COUNT(*) >= 2;
+SELECT MIN(quantidade_disponivel) AS menor, MAX(quantidade_disponivel) AS maior, AVG (quantidade_disponivel) AS Média
+FROM livro;
 
-SELECT MIN(preco) AS menor_preco
-FROM produto;
-
-SELECT AVG(preco) AS média_preco
-FROM produto;
-
-SELECT SUM(preco) AS maior_preco
-FROM produtos;
+SELECT P.id_emprestimo
