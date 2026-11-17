@@ -1,4 +1,4 @@
--- Active: 1794917537243@@127.0.0.1@3308@recupertiva_retrogame_cristopher
+-- Active: 1794917537243@@127.0.0.1@3308@recuperativa_retrogame_cristopher
 DROP DATABASE recuperativa_retrogame_cristopher;
 
 CREATE DATABASE IF not EXISTS recuperativa_retrogame_cristopher;
@@ -79,7 +79,7 @@ insert into categoria (descricao) VALUES
 ('Mundo Aberto'),
 ('Luta');
 
-select * from categoria;
+select * from cliente;
 
 insert into jogo (titulo, codigo, ano_lancamento, quantidade_disponivel, id_plataforma, id_categoria, desenvolvedora) VALUES
 ('Grand Theaf Auto VI', 000000, '2026',200, 1, 3, 'Rockstar Games'),
@@ -88,3 +88,45 @@ insert into jogo (titulo, codigo, ano_lancamento, quantidade_disponivel, id_plat
 ('Need For Speed: Underground 2', 000003, '2004', 400, 1, 3, 'Eletronic Arts'),
 ('The Legend Of Zelda: Ocarina Of Time', 000004, '2026', 500, 3, 3, 'Rockstar North'),
 ('Elden Ring', 000005, '2022', 600, 2, 2, 'Fromsoftware');
+
+insert into locacao (data_retirada, data_prevista, data_devolucao, status_locacao, id_cliente, id_jogo) VALUES
+(NOW(), '2026-07-11', NULL, DEFAULT, 1,5),
+(NOW(), '2026-08-11', NULL, DEFAULT, 2,6),
+(NOW(), '2026-09-11', NULL, DEFAULT, 3,4);
+
+update cliente
+set telefone = '000007'
+where id_cliente = 2
+
+UPDATE jogo
+SET quantidade_disponivel = quantidade_disponivel + 2
+WHERE ano_lancamento > 2000;
+
+INSERT INTO cliente (nome, email, telefone, ativo) VALUES
+('chesperito', 'chesperito@email.com', '123456789', false);
+
+DELETE FROM cliente
+WHERE id_cliente = 5;
+
+DELETE FROM cliente
+WHERE id_cliente = 1;
+
+-- Ao tentar excluir ele faz restrição de chave estrangeira
+
+-- FASE 3: DQL
+
+SELECT titulo, ano_lancamento, quantidade_disponivel FROM jogo;
+
+SELECT titulo from jogo
+WHERE quantidade_disponivel > 2
+ORDER BY titulo DESC;
+
+SELECT titulo, desenvolvedora from jogo
+where titulo LIKE '%grand%';
+
+SELECT titulo FROM jogo
+WHERE ano_lancamento BETWEEN 1990 AND 2025;
+
+select COUNT(*) AS quantidade, sum(quantidade_disponivel) AS soma, AVG(quantidade_disponivel) as media, max(quantidade_disponivel) as maximo, min(quantidade_disponivel) as minimo FROM jogo;
+
+SEL 
