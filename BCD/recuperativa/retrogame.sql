@@ -128,5 +128,3 @@ SELECT titulo FROM jogo
 WHERE ano_lancamento BETWEEN 1990 AND 2025;
 
 select COUNT(*) AS quantidade, sum(quantidade_disponivel) AS soma, AVG(quantidade_disponivel) as media, max(quantidade_disponivel) as maximo, min(quantidade_disponivel) as minimo FROM jogo;
-
-SEL 
