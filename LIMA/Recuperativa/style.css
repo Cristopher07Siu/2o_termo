@@ -1,0 +1,12 @@
+.inicio {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+
+.inicio > figure {
+    padding: 8px;
+    gap: 8px;
+}
